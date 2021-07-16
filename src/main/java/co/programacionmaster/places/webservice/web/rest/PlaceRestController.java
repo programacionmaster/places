@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -13,7 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class PlaceRestController {
 
   @GetMapping
-  public ResponseEntity<List<PlaceResource>> findAll() {
+  public ResponseEntity<List<PlaceResource>> findAll(
+      @RequestParam(name = "name", required = false) String name
+  ) {
     var place1 = new PlaceResource(
         "44ceb2ee-0345-4bcc-99f4-fad5d467y1a3",
         "Restaurante A",
