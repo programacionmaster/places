@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "c0f986be-b327-426f-9a2e-149ba321d2d4",
+		"name": "Places",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Places",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/places?name=Restaurante",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"places"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Restaurante"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "All Places",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/places?name=Restaurante",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"places"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Restaurante"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Sep 2021 22:00:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"44ceb2ee-0345-4bcc-99f4-fad5d467y1a3\",\n        \"name\": \"Restaurante A\",\n        \"longitude\": -76.541067,\n        \"latitude\": 3.404057\n    },\n    {\n        \"id\": \"44ceb2ee-0345-4bcc-99f4-fad5d467y1a1\",\n        \"name\": \"Restaurante B\",\n        \"longitude\": -76.544254,\n        \"latitude\": 3.402472\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Place by Identifier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/api/places/1b52y1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"api",
+						"places",
+						"1b52y1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Place by Identifier",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/api/places/1b52y1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"places",
+								"1b52y1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 23 Sep 2021 22:00:38 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"1b52y1\",\n    \"name\": \"Restaurante A\",\n    \"longitude\": -76.541067,\n    \"latitude\": 3.404057\n}"
+				}
+			]
+		}
+	]
+}
